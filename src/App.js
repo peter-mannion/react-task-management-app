@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, NavLink } from "react-router";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router";
+import ContactForm from "./components/ContactForm/ContactForm";
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
             </li>
           </ul>
         </nav>
+        {/* Routing Logic */}
+        <Routes>
+          <Route path="/contact" element={<ContactForm />} />
+        </Routes>
       </div>
     </Router>
   );
