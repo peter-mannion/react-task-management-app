@@ -1,4 +1,4 @@
-// This card displays the task input item submiited.
+// This card displays the task input item submitted.
 
 import React from "react";
 

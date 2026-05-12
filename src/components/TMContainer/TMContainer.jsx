@@ -16,13 +16,17 @@ const TMContainer = () => {
     setTasks([...tasks, newTask]);
   };
 
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
+
   return (
     <div className="task-list-container">
       <h2>My Tasks</h2>
       <TaskInput addTask={addTask} />
       <div>
         {tasks.map((task) => (
-          <TaskItem key={task.id} task={task} />
+          <TaskItem key={task.id} task={task} deleteTask={deleteTask} />
         ))}
       </div>
     </div>
