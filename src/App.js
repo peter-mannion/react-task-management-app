@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router";
 import ContactForm from "./components/ContactForm/ContactForm";
+import TMContainer from "./components/TMContainer/TMContainer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         </nav>
         {/* Routing Logic */}
         <Routes>
+          <Route path="/" element={<TMContainer />} />
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </div>

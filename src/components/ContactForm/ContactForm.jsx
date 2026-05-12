@@ -21,7 +21,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form Submitted:", formData);
-    alert(`Thanks for reaching out, ${formData.firstName}!`);
+    alert(`Your message has been submitted, ${formData.firstName}!`);
     setFormData({ firstName: "", lastName: "", email: "", message: "" });
   };
 
