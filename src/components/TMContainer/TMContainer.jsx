@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import TaskInput from "../TaskInput/TaskInput";
+import TaskItem from "../TaskCard/TaskCard";
 
 const TMContainer = () => {
   const [tasks, setTasks] = useState([]);
@@ -16,9 +17,14 @@ const TMContainer = () => {
   };
 
   return (
-    <div className="todo-list-container">
+    <div className="task-list-container">
       <h2>My Tasks</h2>
       <TaskInput addTask={addTask} />
+      <div>
+        {tasks.map((task) => (
+          <TaskItem key={task.id} task={task} />
+        ))}
+      </div>
     </div>
   );
 };
