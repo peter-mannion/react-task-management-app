@@ -16,6 +16,14 @@ const TMContainer = () => {
     setTasks([...tasks, newTask]);
   };
 
+  const toggleComplete = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task,
+      ),
+    );
+  };
+
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
@@ -26,7 +34,12 @@ const TMContainer = () => {
       <TaskInput addTask={addTask} />
       <div>
         {tasks.map((task) => (
-          <TaskItem key={task.id} task={task} deleteTask={deleteTask} />
+          <TaskItem
+            toggleComplete={toggleComplete}
+            key={task.id}
+            task={task}
+            deleteTask={deleteTask}
+          />
         ))}
       </div>
     </div>
