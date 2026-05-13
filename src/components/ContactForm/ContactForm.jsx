@@ -29,47 +29,60 @@ const ContactForm = () => {
     <div className="contact-container">
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label>First Name</label>
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
-
+        <div className="form-fields">
+          <div className="form-group">
+            <label>First Name</label>
+            <div>
+              <input
+                type="text"
+                name="firstName"
+                placeholder="Enter your first name"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
           <div className="form-group">
             <label>Last Name</label>
-            <input
-              type="text"
-              name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
-              required
-            />
+            <div>
+              <input
+                type="text"
+                name="lastName"
+                placeholder="Enter your last name"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+              />
+            </div>
           </div>
-        </div>
 
-        <div className="form-group">
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="form-group">
+            <label>Email</label>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+          </div>
 
-        <div className="form-group">
-          <label>Message</label>
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
+          <div className="form-group">
+            <label>Message</label>
+            <div>
+              <textarea
+                name="message"
+                placeholder="Type your message here"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+            </div>
+          </div>
         </div>
 
         <button type="submit" className="submit-btn">
