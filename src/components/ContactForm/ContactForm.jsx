@@ -10,6 +10,10 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
+  const [submittedName, setSubmittedName] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -20,13 +24,23 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert(`Your message has been submitted, ${formData.firstName}!`);
+    setSubmittedName(formData.firstName);
+    //    setTimeout(() => setSubmitted(false), 5000);
     setFormData({ firstName: "", lastName: "", email: "", message: "" });
+    setSubmitted(true);
   };
 
   return (
     <div className="contact-container">
+      {submitted && (
+        <div className="success-message">
+          <h3>Success!</h3>
+          <p>Your message has been submitted, {submittedName}.</p>
+          <button className="ok-btn" onClick={() => setSubmitted(false)}>
+            OK
+          </button>
+        </div>
+      )}
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-fields">

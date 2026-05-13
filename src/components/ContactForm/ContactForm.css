@@ -91,11 +91,36 @@
 }
 
 .success-message {
-  background-color: #d4edda;
-  color: #155724;
+  background-color: #ecfdf5;
+  color: #065f46;
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 20px;
   text-align: center;
   border: 1px solid #c3e6cb;
+}
+
+.ok-btn {
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
+  /*font-family: inherit; /* Ensures it matches the index.css reset */
+}
+
+.ok-btn:hover {
+  background-color: #172554;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 58, 138, 0.3);
+}
+
+.ok-btn:active {
+  transform: translateY(1px);
 }
