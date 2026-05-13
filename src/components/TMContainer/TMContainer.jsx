@@ -37,12 +37,45 @@ const TMContainer = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  const [filter, setFilter] = useState("All"); // Default to 'All'
+
+  const filteredTasks = tasks.filter((task) => {
+    if (filter === "Completed") return task.completed;
+    if (filter === "Incomplete") return !task.completed;
+    return true; // For 'All'
+  });
+
   return (
     <div className="task-list-container">
       <h2>My Tasks</h2>
       <TaskInput addTask={addTask} />
+
+      <div className="filter-buttons">
+        <button
+          className={filter === "All" ? "active" : ""}
+          onClick={() => setFilter("All")}
+        >
+          All
+        </button>
+
+        <button
+          className={filter === "Incomplete" ? "active" : ""}
+          onClick={() => setFilter("Incomplete")}
+        >
+          Incomplete
+        </button>
+
+        <button
+          className={filter === "Completed" ? "active" : ""}
+          onClick={() => setFilter("Completed")}
+        >
+          Completed
+        </button>
+      </div>
+
+      {/* Pass filteredTasks instead of tasks */}
       <div>
-        {tasks.map((task) => (
+        {filteredTasks.map((task) => (
           <TaskItem
             toggleComplete={toggleComplete}
             key={task.id}
