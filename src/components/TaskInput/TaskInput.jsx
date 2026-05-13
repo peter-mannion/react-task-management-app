@@ -1,6 +1,7 @@
 // TaskInput is an input form to enter new tasks
 
 import React, { useState } from "react";
+import "./TaskInput.css";
 
 const TaskInput = ({ addTask }) => {
   const [taskText, setTaskText] = useState("");
@@ -16,11 +17,14 @@ const TaskInput = ({ addTask }) => {
     <form onSubmit={handleSubmit} className="task-input-form">
       <input
         type="text"
+        className="task-input"
         placeholder="Add a new task ..."
         value={taskText}
         onChange={(e) => setTaskText(e.target.value)}
       />
-      <button type="submit">Add Task</button>
+      <button type="submit" className="add-task-btn">
+        Add Task
+      </button>
     </form>
   );
 };

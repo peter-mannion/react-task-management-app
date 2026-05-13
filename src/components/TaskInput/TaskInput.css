@@ -1,0 +1,45 @@
+.task-input-form {
+  display: flex;
+  padding: 0 20px; /* 0 top/bottom, 20px left/right */
+  margin-top: 20px;
+  gap: 10px;
+  margin: 20px 0;
+  max-width: 500px;
+}
+
+.task-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.task-input:focus {
+  border-color: #1e3a8a;
+}
+
+.add-task-btn {
+  padding: 12px 24px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .task-input-form {
+    flex-direction: column; /* Stacks the input and button vertically */
+    align-items: stretch; /* Ensures they both take up the full width */
+    gap: 12px; /* Gives them a little more vertical breathing room */
+  }
+
+  .add-task-btn {
+    width: 100%; /* Makes the button a nice big touch target for thumbs */
+  }
+}
