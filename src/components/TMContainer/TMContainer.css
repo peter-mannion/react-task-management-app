@@ -14,3 +14,52 @@
   font-weight: bold;
   text-align: left;
 }
+
+/* Container for both the input form and the filter buttons */
+.input-form-filter-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+/* Vertical stack for laptop/desktop */
+.filter-btn-group {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Mobile View (Switching positions) */
+@media (max-width: 768px) {
+  .input-form-filter-btns {
+    flex-direction: column; /* Stack input form on top of buttons */
+    align-items: stretch;
+  }
+
+  .filter-btn-group {
+    flex-direction: row; /* Buttons move to horizontal row */
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
+
+/* Basic filter button styling */
+.filter-btn {
+  padding: 6px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+/* Style when the filter button is active */
+.filter-btn.active {
+  background-color: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}

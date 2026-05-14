@@ -49,41 +49,43 @@ const TMContainer = () => {
   return (
     <div className="task-list-container">
       <h2>My Tasks</h2>
-      <TaskInput addTask={addTask} />
+      <div className="input-form-filter-btns">
+        <TaskInput addTask={addTask} />
 
-      <div className="filter-buttons">
-        <button
-          className={filter === "All" ? "active" : ""}
-          onClick={() => setFilter("All")}
-        >
-          All
-        </button>
+        <div className="filter-btn-group">
+          <button
+            className={`filter-btn ${filter === "All" ? "active" : ""}`}
+            onClick={() => setFilter("All")}
+          >
+            All
+          </button>
 
-        <button
-          className={filter === "Incomplete" ? "active" : ""}
-          onClick={() => setFilter("Incomplete")}
-        >
-          Incomplete
-        </button>
+          <button
+            className={`filter-btn ${filter === "Incomplete" ? "active" : ""}`}
+            onClick={() => setFilter("Incomplete")}
+          >
+            Incomplete
+          </button>
 
-        <button
-          className={filter === "Completed" ? "active" : ""}
-          onClick={() => setFilter("Completed")}
-        >
-          Completed
-        </button>
-      </div>
+          <button
+            className={`filter-btn ${filter === "Completed" ? "active" : ""}`}
+            onClick={() => setFilter("Completed")}
+          >
+            Completed
+          </button>
+        </div>
 
-      {/* Pass filteredTasks instead of tasks */}
-      <div>
-        {filteredTasks.map((task) => (
-          <TaskItem
-            toggleComplete={toggleComplete}
-            key={task.id}
-            task={task}
-            deleteTask={deleteTask}
-          />
-        ))}
+        {/* Pass filteredTasks instead of tasks */}
+        <div>
+          {filteredTasks.map((task) => (
+            <TaskItem
+              toggleComplete={toggleComplete}
+              key={task.id}
+              task={task}
+              deleteTask={deleteTask}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
