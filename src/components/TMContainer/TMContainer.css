@@ -24,7 +24,7 @@
   align-items: flex-start;
   width: 100%;
   gap: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .task-input-wrapper {
@@ -50,6 +50,24 @@
   margin: 10px 0;
 }
 
+/* Basic filter button styling */
+.filter-btn {
+  padding: 6px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+/* Style when the filter button is active */
+.filter-btn.active {
+  background-color: #1e3a8a;
+  color: white;
+  border-color: #1e3a8a;
+}
+
 /* Mobile View */
 @media (max-width: 780px) {
   .input-form-filter-btns {
@@ -70,20 +88,14 @@
   }
 }
 
-/* Basic filter button styling */
-.filter-btn {
-  padding: 6px 12px;
-  background-color: #f8f9fa;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.2s;
+@media (max-width: 348px) {
+  .filter-btn {
+    font-size: 0.8rem;
+  }
 }
 
-/* Style when the filter button is active */
-.filter-btn.active {
-  background-color: #1e3a8a;
-  color: white;
-  border-color: #1e3a8a;
+@media (max-width: 300px) {
+  .filter-btn {
+    font-size: 0.7rem;
+  }
 }
