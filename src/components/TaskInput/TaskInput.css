@@ -1,9 +1,8 @@
 .task-input-form {
   display: flex;
-  padding: 0 20px; /* 0 top/bottom, 20px left/right */
-  margin-top: 20px;
+  padding: 0 0 20px;
   gap: 10px;
-  margin: 20px 0;
+  margin: 10px 0;
   max-width: 500px;
 }
 
@@ -34,12 +33,12 @@
 
 @media (max-width: 480px) {
   .task-input-form {
-    flex-direction: column; /* Stacks the input and button vertically */
-    align-items: stretch; /* Ensures they both take up the full width */
-    gap: 12px; /* Gives them a little more vertical breathing room */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
   }
 
   .add-task-btn {
-    width: 100%; /* Makes the button a nice big touch target for thumbs */
+    width: 100%;
   }
 }

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import TaskInput from "../TaskInput/TaskInput";
 import TaskItem from "../TaskCard/TaskCard";
+import "./TMContainer.css";
 
 const TMContainer = () => {
   // Retain "tasks" even if user refreshes the browswer or navigates between TMContainer and ContactForm - initialize state using browser's local storage.
