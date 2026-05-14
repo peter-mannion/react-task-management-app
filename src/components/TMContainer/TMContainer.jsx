@@ -50,7 +50,9 @@ const TMContainer = () => {
     <div className="task-list-container">
       <h2>My Tasks</h2>
       <div className="input-form-filter-btns">
-        <TaskInput addTask={addTask} />
+        <div className="task-input-wrapper">
+          <TaskInput addTask={addTask} />
+        </div>
 
         <div className="filter-btn-group">
           <button
@@ -74,18 +76,17 @@ const TMContainer = () => {
             Completed
           </button>
         </div>
-
-        {/* Pass filteredTasks instead of tasks */}
-        <div>
-          {filteredTasks.map((task) => (
-            <TaskItem
-              toggleComplete={toggleComplete}
-              key={task.id}
-              task={task}
-              deleteTask={deleteTask}
-            />
-          ))}
-        </div>
+      </div>
+      {/* Pass filteredTasks instead of tasks */}
+      <div className="todo-list">
+        {filteredTasks.map((task) => (
+          <TaskItem
+            toggleComplete={toggleComplete}
+            key={task.id}
+            task={task}
+            deleteTask={deleteTask}
+          />
+        ))}
       </div>
     </div>
   );
