@@ -1,6 +1,7 @@
 // This card displays the task input item submitted.
 
 import React from "react";
+import "./TaskCard.css";
 
 const TaskItem = ({ task, toggleComplete, deleteTask }) => {
   return (
