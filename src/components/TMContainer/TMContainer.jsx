@@ -1,4 +1,4 @@
-// Parent Task Management Container
+// Parent task management container handles task state, local storage, filtering, and rendering.
 
 import React, { useState, useEffect } from "react";
 import TaskInput from "../TaskInput/TaskInput";
@@ -12,7 +12,7 @@ const TMContainer = () => {
     return savedTasks ? JSON.parse(savedTasks) : [];
   });
 
-  // Save to browser's local storage whenever "tasks" array is updated
+  // Persist tasks in local storage whenever the task list changes.
   useEffect(() => {
     localStorage.setItem("myTasks", JSON.stringify(tasks));
   }, [tasks]);
@@ -38,7 +38,7 @@ const TMContainer = () => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const [filter, setFilter] = useState("All"); // Default to 'All'
+  const [filter, setFilter] = useState("All"); // Default filter selection is 'All'
 
   const filteredTasks = tasks.filter((task) => {
     if (filter === "Completed") return task.completed;
@@ -55,6 +55,7 @@ const TMContainer = () => {
         </div>
 
         <div className="filter-btn-group">
+          {/* Filter buttons for switching task list visibility */}
           <button
             className={`filter-btn ${filter === "All" ? "active" : ""}`}
             onClick={() => setFilter("All")}

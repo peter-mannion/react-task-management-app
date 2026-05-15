@@ -1,4 +1,4 @@
-// TaskInput is an input form to enter new tasks
+// Task input component renders a form for creating new todo items.
 
 import React, { useState } from "react";
 import "./TaskInput.css";

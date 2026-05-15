@@ -1,8 +1,10 @@
+/* App-level layout and navigation styles */
 .App {
   background-color: #f1f5f9;
   min-height: 100vh;
 }
 
+/* Top navigation bar container */
 .nav-bar-style {
   background-color: #1e3a8a;
   display: flex;
@@ -25,7 +27,7 @@
   gap: 20px;
 }
 
-/* Navigation line items */
+/* Navigation link styling and button-like appearance */
 .nav-link {
   padding: 8px 16px;
   border-radius: 5px;

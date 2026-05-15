@@ -1,3 +1,4 @@
+/* Contact form component layout and styling */
 .contact-container {
   max-width: 500px;
   margin: 25px auto;
@@ -33,6 +34,7 @@
   flex-direction: column;
 }
 
+/* Individual form field wrapper with label and input */
 .form-group label {
   font-weight: 600;
   margin-bottom: 8px;

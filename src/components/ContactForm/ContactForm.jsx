@@ -1,8 +1,9 @@
+// Contact form component for collecting user contact information and messages.
 import React, { useState } from "react";
 import "./ContactForm.css";
 
 const ContactForm = () => {
-  // Update state to include separate name fields
+  // Form state stores user inputs for name, email, and message.
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -14,6 +15,7 @@ const ContactForm = () => {
 
   const [submittedName, setSubmittedName] = useState("");
 
+  // Update the form state when the user types into an input field.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -22,6 +24,7 @@ const ContactForm = () => {
     });
   };
 
+  // Handle form submission and show the success message.
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmittedName(formData.firstName);

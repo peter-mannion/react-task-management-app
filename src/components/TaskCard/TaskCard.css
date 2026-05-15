@@ -1,4 +1,4 @@
-/* TaskCard styling - card wrapper, task content, checkbox, task description, and delete button */
+/* Task card styling: layout, completed state, and interactive controls */
 
 .todo-card {
   display: flex;

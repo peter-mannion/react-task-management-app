@@ -1,4 +1,4 @@
-// This card displays the task input item submitted.
+// Task item card component displays a task entry with completion checkbox and delete button.
 
 import React from "react";
 import "./TaskCard.css";
@@ -7,7 +7,7 @@ const TaskItem = ({ task, toggleComplete, deleteTask }) => {
   return (
     <div className={`todo-card ${task.completed ? "completed" : ""}`}>
       <div className="task-content">
-        {/* The Checkbox */}
+        {/* Task completion toggle and action controls */}
         <input
           type="checkbox"
           checked={task.completed}
