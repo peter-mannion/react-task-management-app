@@ -14,9 +14,9 @@ A task manager app and a contact form built with React components
 4. Tasks are preserved in the task list even after page reload
 5. The Contact Form allows the user to submit first and last name, email, and feedback message
 
-/docs - user stories, state diagrams, component descriptions
-/src - App.js
-/src/components - React components
+- /docs - user stories, state diagrams, component descriptions
+- /src - App.js
+- /src/components - React components
 
 # How to use the site
 
