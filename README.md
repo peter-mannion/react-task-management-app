@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Name: Peter Mannion
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Project 03: A Task Manager Web App using React Framework
 
-## Available Scripts
+# Project Overview
 
-In the project directory, you can run:
+A task manager app and a contact form built with React components
 
-### `npm start`
+# Project Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Allows the user to navigate to Task Manager app or Contact Form via navbar links
+2. Task Manager app allows the user to add tasks, mark tasks as completed, and delete tasks
+3. Task Manager app allows the user to filter on All, Incomplete, or Completed Tasks
+4. Tasks are preserved in the task list even after page reload
+5. The Contact Form allows the user to submit first and last name, email, and feedback message
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+/docs - user stories, state diagrams, component descriptions
+/src - App.js
+/src/components - React components
 
-### `npm test`
+# How to use the site
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Site initialization
 
-### `npm run build`
+- On first loading, the page displays the Task Manager app with an empty task list
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Task Manager
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Add a task by typing a description in the input field and clicking the "Add Task" button
+- Each task item is displayed as a card with a checkbox, task description, and "DELETE" button
+- Checking the checkbox marks a task as completed and the task description formats the text as strike-through
+- Clicking the "DELETE" button permanently removes a task from the list
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Task filtering
 
-### `npm run eject`
+- Each task list can be filtered using buttons "All", "Incomplete", and "Completed"
+  - Clicking "All" displays "Incomplete" and "Completed" tasks
+  - Clicking "Incomplete" displays "Incomplete" tasks only
+  - Clicking "Completed" displays "Completed" tasks only
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contact Form
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The Contact Form allows the user to submit feedback
+- Each field has validation which ensures content is input before submission
+- The email address field checks for the correct format
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Technologies used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- HTML
+- CSS
+- JavaScript
+- React framework
 
-## Learn More
+# Ideas for improvement
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Set filter=All or Incomplete when user adds a new task otherwise if user sets filter=Completed a new task will be filtered out and not displayed.
+2. For mobile screens, rather than reducing filter button text font size explore stacking filter buttons vertically to prevent filter-button-group overflowing beyond the container.
+3. Consider removing task-content as a separate wrapper, for Checkbox, Text, and Delete button. Restructure the layout where the checkbox and text are grouped on the left with a separate wrapper from the delete button which will sit alone on the right.
+4. For Contact Form, change the success message to overlay the form fields rather than a container above the “Contact Us” header.
+5. Consider moving the filter button logic into its own small component.
