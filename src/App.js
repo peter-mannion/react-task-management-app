@@ -5,7 +5,13 @@ import "./App.css";
 import React from "react";
 
 // Routing components for navigation between pages
-import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+  BrowserRouter,
+} from "react-router-dom";
 
 // Page components
 import ContactForm from "./components/ContactForm/ContactForm";
@@ -13,7 +19,7 @@ import TMContainer from "./components/TMContainer/TMContainer";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/react-task-management-app">
       <div className="App">
         {/* Top-level navigation bar */}
         <nav className="nav-bar-style">
@@ -41,7 +47,7 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
